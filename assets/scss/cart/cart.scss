@@ -1,0 +1,99 @@
+#nav-bar{
+    .navbar{
+        .container{
+            .collapse{
+                .cart-icon{
+                    a{
+                        font-size: 25px;
+                        color: red;
+                        cursor: pointer;
+                        transition: all 0.4s;
+                        text-decoration: none;
+                    }
+                    a:hover{
+                        color: rgb(175, 9, 9);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#product-table{
+    .container{
+        .cart-lastPrice{
+            position: relative;
+            bottom: 100px;
+            left: 1000px;
+            border: 1px solid gray;
+            width: 350px !important;
+            .card-body{
+                h2{
+                    color: green;
+                    font-weight: 600;
+                    text-align: center;
+                    border-bottom: 1px dotted gray;
+                    padding: 25px;
+                }
+                .prices{
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 20px;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    span{
+                        padding: 25px;
+                        font-weight: 400;
+                        
+                    }
+                    span:nth-child(2){
+                        font-weight: 700;
+                        color: green;
+                    }
+                }
+            }
+        }
+        .table{
+            position: relative;
+            bottom: 80px;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+            .count{
+                i{
+                    font-size: 15px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    color: black;
+                }
+                i:hover{
+                    color: gray;
+                }
+                input{
+                    // width: 27px;
+                    // height: 27px;
+                    color: black;
+                    text-align: center;
+                }
+            }
+            .delete-all{
+                color: red;
+                font-size: 20px;
+                cursor: pointer;
+                position: relative;
+                left: 15px;
+                transition: all 0.4s;
+            }
+            .delete-all:hover{
+                color: darkred;
+            }
+        }
+    }
+}
+
+.unable{
+    cursor: not-allowed !important;
+    color: gray !important;
+}

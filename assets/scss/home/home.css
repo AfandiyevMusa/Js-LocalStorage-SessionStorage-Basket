@@ -1,0 +1,38 @@
+#nav-bar .navbar .container .collapse .cart-icon a {
+  font-size: 25px;
+  color: red;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  text-decoration: none;
+}
+
+#nav-bar .navbar .container .collapse .cart-icon a:hover {
+  color: #af0909;
+}
+
+#products {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#products .container .row .card {
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin: 20px;
+}
+
+#products .container .row .card .card-body .cart-part span {
+  color: red;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#products .container .row .card:hover {
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+/*# sourceMappingURL=home.css.map */

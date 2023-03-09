@@ -1,0 +1,99 @@
+#nav-bar .navbar .container .collapse .cart-icon a {
+  font-size: 25px;
+  color: red;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  text-decoration: none;
+}
+
+#nav-bar .navbar .container .collapse .cart-icon a:hover {
+  color: #af0909;
+}
+
+#product-table .container .cart-lastPrice {
+  position: relative;
+  bottom: 100px;
+  left: 1000px;
+  border: 1px solid gray;
+  width: 350px !important;
+}
+
+#product-table .container .cart-lastPrice .card-body h2 {
+  color: green;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 1px dotted gray;
+  padding: 25px;
+}
+
+#product-table .container .cart-lastPrice .card-body .prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#product-table .container .cart-lastPrice .card-body .prices span {
+  padding: 25px;
+  font-weight: 400;
+}
+
+#product-table .container .cart-lastPrice .card-body .prices span:nth-child(2) {
+  font-weight: 700;
+  color: green;
+}
+
+#product-table .container .table {
+  position: relative;
+  bottom: 80px;
+}
+
+#product-table .container .table img {
+  width: 100px;
+  height: 100px;
+}
+
+#product-table .container .table .count i {
+  font-size: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: black;
+}
+
+#product-table .container .table .count i:hover {
+  color: gray;
+}
+
+#product-table .container .table .count input {
+  color: black;
+  text-align: center;
+}
+
+#product-table .container .table .delete-all {
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  left: 15px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#product-table .container .table .delete-all:hover {
+  color: darkred;
+}
+
+.unable {
+  cursor: not-allowed !important;
+  color: gray !important;
+}
+/*# sourceMappingURL=cart.css.map */

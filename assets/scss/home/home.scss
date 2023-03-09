@@ -1,0 +1,49 @@
+#nav-bar{
+    .navbar{
+        .container{
+            .collapse{
+                .cart-icon{
+                    a{
+                        font-size: 25px;
+                        color: red;
+                        cursor: pointer;
+                        transition: all 0.4s;
+                        text-decoration: none;
+                    }
+                    a:hover{
+                        color: rgb(175, 9, 9);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+#products{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    .container{
+        .row{
+            .card{
+                cursor: pointer;
+                transition: all 0.3s;
+                margin: 20px;
+                .card-body{
+                    .cart-part{
+                        span{
+                            color: red;
+                            font-size: 20px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+            .card:hover{
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                transform: scale(1.02);
+            }
+        }
+    }
+}
