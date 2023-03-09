@@ -78,14 +78,8 @@ if (products != null) {
         })
     }
 
-    function total(str) {
-        let sum = 0;
-        for (const eachStr of str) {
-            sum += (parseFloat(eachStr.price) * parseFloat(eachStr.count))
-        }
-        return sum;
-    }
     totalPrice.innerText = `${total(JSON.parse(localStorage.getItem("products")))}` + " AZN";
+    
 } else {
     document.querySelector(".alert-light").classList.remove("d-none")
     document.querySelector("table").classList.add("d-none")
@@ -97,4 +91,12 @@ function getProductsCount(arr) {
         cnt += eachItem.count;
     }
     document.querySelector("sup").innerText = cnt;
+}
+
+function total(str) {
+    let sum = 0;
+    for (const eachStr of str) {
+        sum += (parseFloat(eachStr.price) * parseFloat(eachStr.count))
+    }
+    return sum;
 }
