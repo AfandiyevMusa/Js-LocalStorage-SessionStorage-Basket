@@ -4,10 +4,13 @@ let products = JSON.parse(localStorage.getItem("products"));
 let tableBody = document.querySelector("tbody");
 let input = document.querySelectorAll("input")
 let totalPrice = document.querySelector(".total-value");
+let thead = document.querySelector("thead")
+let warningMessage = document.querySelector(".warning");
+
 
 if (products != null) {
-    document.querySelector(".alert-light").classList.add("d-none")
-    document.querySelector("table").classList.remove("d-none")
+    warningMessage.classList.add("d-none")
+    thead.classList.remove("d-none")
     getProductsCount(products);
     products.forEach(product => {
         tableBody.innerHTML += `<tr data-id="${product.id}">
@@ -38,10 +41,10 @@ if (products != null) {
                 minusBtns[i].nextElementSibling.value = decreasedProduct.count;
 
                 let productLastPrice = minusBtns[i].parentElement.parentElement.previousElementSibling.innerText;
-                productLastPrice = productLastPrice - decreasedProduct.price;
-                // minusBtns[i].parentElement.parentElement.previousElementSibling.innerText = productLastPrice.toString()
+                productLastPrice = parseInt(productLastPrice) - parseInt(decreasedProduct.price);
+                minusBtns[i].parentElement.parentElement.previousElementSibling.innerText = productLastPrice;
+                window.localStorage.setItem("products", JSON.stringify(products))
 
-                localStorage.setItem("products", JSON.stringify(products))
                 document.querySelector("sup").innerText--;
                 totalPrice.innerText = `${total(JSON.parse(localStorage.getItem("products")))}` + " AZN";
             } else {
@@ -55,7 +58,12 @@ if (products != null) {
             let increasedProduct = products.find(m => m.id == plusBtns[i].parentElement.parentElement.parentElement.getAttribute("data-id"))
             increasedProduct.count += 1;
             plusBtns[i].previousElementSibling.value = increasedProduct.count;
-            localStorage.setItem("products", JSON.stringify(products))
+            
+            let productLastPrice = plusBtns[i].parentElement.parentElement.previousElementSibling.innerText;
+            productLastPrice = parseInt(productLastPrice) + parseInt(increasedProduct.price);
+            plusBtns[i].parentElement.parentElement.previousElementSibling.innerText = productLastPrice;
+
+            window.localStorage.setItem("products", JSON.stringify(products))
             document.querySelector("sup").innerText++;
             totalPrice.innerText = `${total(JSON.parse(localStorage.getItem("products")))}` + " AZN";
         })
@@ -78,11 +86,12 @@ if (products != null) {
         })
     }
 
-    totalPrice.innerText = `${total(JSON.parse(localStorage.getItem("products")))}` + " AZN";
+       totalPrice.innerText = `${total(JSON.parse(localStorage.getItem("products")))}` + " AZN";
     
 } else {
-    document.querySelector(".alert-light").classList.remove("d-none")
-    document.querySelector("table").classList.add("d-none")
+    warningMessage.classList.remove("d-none")
+    thead.classList.add("d-none")
+    
 }
 
 function getProductsCount(arr) {
